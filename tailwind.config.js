@@ -5,6 +5,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
+    backgroundImage:{
+      'bg-1': "url(../public/images/background2.png)",
+      'bg-2': "url(../public/images/background3.png)"
+    },
     extend: {
       fontFamily: {
         montserrat: "'Montserrat', sans-serif",
@@ -20,8 +24,12 @@ module.exports = {
       'blueAlternate1': '#86b6fc',
       'whiteAlternate': '#F7F9FF',
       'sandAlternate': '#F1F1E6',
-      'white': '#ffffff'
+      'white': '#ffffff',
+      'slate-900': '#0f172a',
+      'black': '#000000'
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 }

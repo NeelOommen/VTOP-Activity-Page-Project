@@ -11,9 +11,9 @@ export default function defaultClub() {
           <main>
             <div className='bg-mainColor w-full h-screen'>
                 <div className='text-center p-12'>
-                    <div className='text-blueAlternate1 font-montserrat text-6xl font-bold'>The club pages are currently unavailable.</div>
+                    <div className='text-blueAlternate1 font-montserrat text-6xl font-bold'>This club page is currently unavailable.</div>
                     <br /><br />
-                    <a href="/" className='font-montserrat text-2xl text-whiteAlternate hover:text-blueAlternate1 transition duration-300'>Return to home page</a>
+                    <a href="/#club_section" className='font-montserrat text-2xl text-whiteAlternate hover:text-blueAlternate1 transition duration-300'>Return to home page</a>
                 </div>
             </div>
           </main>
