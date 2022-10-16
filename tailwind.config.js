@@ -26,10 +26,13 @@ module.exports = {
       'sandAlternate': '#F1F1E6',
       'white': '#ffffff',
       'slate-900': '#0f172a',
-      'black': '#000000'
+      'black': '#000000',
+      'green': '#A2FA95',
+      'gold': '#D6A419'
     },
   },
   plugins: [
-    require('tailwind-scrollbar-hide')
+    require('tailwind-scrollbar-hide'),
+    require('@tailwindcss/aspect-ratio')
   ],
 }

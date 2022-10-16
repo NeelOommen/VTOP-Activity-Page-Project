@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import ClubCard from '../components/ClubCard'
 
 export default function Home() {
   return (
@@ -16,11 +17,11 @@ export default function Home() {
           <nav className='p-4 mb-10'>
             <span className='text-whiteAlternate hover:text-blueAlternate1 text-4xl font-montserrat font-bold float-left transition duration-300'>VIT Vellore Events</span>
             <ul className='text-whiteAlternate font-montserrat float-left text-2xl m-1.5 ml-6'>
-              <li className='float-left ml-3 mr-3'><a href='/clubs/defaultClub' className='hover:text-blueAlternate1 transition duration-300'>Clubs</a></li>
-              <li className='float-left ml-3 mr-3'><a href='/events/defaultEvent' className='hover:text-blueAlternate1 transition duration-300'>Events</a></li>
+              <li className='float-left ml-3 mr-3'><a href='/clubs/clubList' className='hover:text-blueAlternate1 transition duration-300'>Clubs</a></li>
+              <li className='float-left ml-3 mr-3'><a href='/events/eventList' className='hover:text-blueAlternate1 transition duration-300'>Events</a></li>
             </ul>
           </nav>
-          <section id="preview_section" className='bg-bg-1 h-screen w-full clear-both'>
+          <section id="preview_section" className='bg-bg-1 h-fit w-full clear-both p-1'>
             <div className='px-6 py-4'>
               <div className='columns-4 flex justify-center p-4 rounded-2xl bg-whiteAlternate bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20'>
                 <img src="/images/preview1.png" className='w-[300px] h-[300px] rounded-3xl mx-10'/>
@@ -29,7 +30,7 @@ export default function Home() {
                 <img src="/images/preview4.png" className='w-[300px] h-[300px] rounded-3xl mx-10'/>
               </div>
             </div>
-            <div className='m-2 ml-8 mr-8 p-4 rounded-lg bg-black bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-40'>
+            <div className='m-2 ml-8 mr-8 p-4 mb-8 rounded-lg bg-black bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-40'>
               <div className='text-white font-montserrat text-lg'>
                 Enim amet dolore duis ex laborum irure. Adipisicing incididunt minim reprehenderit amet veniam culpa qui ea. Ullamco labore sint excepteur pariatur amet id culpa occaecat nulla enim aliqua. Reprehenderit cupidatat eu consequat aliqua laboris minim nulla. Veniam non veniam elit non mollit mollit nisi adipisicing occaecat enim et fugiat. Mollit in eu esse pariatur qui aute eu labore amet qui aliqua irure sit adipisicing. Magna nisi eu anim enim cillum veniam aliquip sint qui tempor minim velit pariatur.
                 Culpa occaecat amet elit incididunt dolore fugiat. Incididunt exercitation sit commodo irure consequat ex irure sint dolor. Minim aliquip deserunt esse adipisicing ea sit laboris nulla ad non mollit tempor anim voluptate.
@@ -38,67 +39,19 @@ export default function Home() {
             </div>
           </section>
 
-          <section id='club_section' className='h-screen w-full bg-bg-2 bg-cover absolute'>
+          {/* <section id='club_section' className='h-screen w-full bg-bg-2 bg-cover absolute'>
             <div className='relative top-4 left-4 p-2 rounded-2xl w-[230px] bg-blueAlternate1 transform hover:scale-110 transition duration-300'>
                 <span className='text-whiteAlternate font-montserrat text-7xl font-bold'>Clubs</span>
             </div>
             <div className='overflow-x-scroll overflow-y-hidden scrollbar-hide whitespace-nowrap relative top-32'>
-              <a href='/clubs/defaultClub2'>
-                <div className='inline-block bg-slate-900 h-[400px] w-[600px] bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 rounded-2xl p-4 mx-8 transform hover:scale-110 transition duration-300'>
-                  <span className='text-whiteAlternate font-montserrat font-bold text-6xl'>Club 1</span>
-                  <div className='mt-4 font-montserrat text-white'>
-                    Esse adipisicing officia ut magna. Occaecat Lorem id ea Lorem <br /> labore excepteur id proident elit ipsum. <br />Cupidatat laborum ut nulla qui sunt anim officia aute qui adipisicing <br />ullamco consectetur.Incididunt culpa mollit non sint ex. <br />Sit anim consequat proident proident mollit cillum nostrud ea excepteur.<br />
-                    Esse adipisicing officia ut magna. Occaecat Lorem id ea Lorem <br /> labore excepteur id proident elit ipsum. <br />Cupidatat laborum ut nulla qui sunt anim officia aute qui adipisicing <br />ullamco consectetur.Incididunt culpa mollit non sint ex. <br />Sit anim consequat proident proident mollit cillum nostrud ea excepteur.
-                  </div>
-                </div>
-              </a>
-              <a href='/clubs/defaultClub2'>
-                <div className='inline-block bg-slate-900 h-[400px] w-[600px] bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 rounded-2xl p-4 mx-8 transform hover:scale-110 transition duration-300'>
-                  <span className='text-whiteAlternate font-montserrat font-bold text-6xl'>Club 2</span>
-                  <div className='mt-4 font-montserrat text-white'>
-                    Esse adipisicing officia ut magna. Occaecat Lorem id ea Lorem <br /> labore excepteur id proident elit ipsum. <br />Cupidatat laborum ut nulla qui sunt anim officia aute qui adipisicing <br />ullamco consectetur.Incididunt culpa mollit non sint ex. <br />Sit anim consequat proident proident mollit cillum nostrud ea excepteur.<br />
-                    Esse adipisicing officia ut magna. Occaecat Lorem id ea Lorem <br /> labore excepteur id proident elit ipsum. <br />Cupidatat laborum ut nulla qui sunt anim officia aute qui adipisicing <br />ullamco consectetur.Incididunt culpa mollit non sint ex. <br />Sit anim consequat proident proident mollit cillum nostrud ea excepteur.
-                  </div>
-                </div>
-              </a>
-              <a href='/clubs/defaultClub2'>
-                <div className='inline-block bg-slate-900 h-[400px] w-[600px] bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 rounded-2xl p-4 mx-8 transform hover:scale-110 transition duration-300'>
-                  <span className='text-whiteAlternate font-montserrat font-bold text-6xl'>Club 3</span>
-                  <div className='mt-4 font-montserrat text-white'>
-                    Esse adipisicing officia ut magna. Occaecat Lorem id ea Lorem <br /> labore excepteur id proident elit ipsum. <br />Cupidatat laborum ut nulla qui sunt anim officia aute qui adipisicing <br />ullamco consectetur.Incididunt culpa mollit non sint ex. <br />Sit anim consequat proident proident mollit cillum nostrud ea excepteur.<br />
-                    Esse adipisicing officia ut magna. Occaecat Lorem id ea Lorem <br /> labore excepteur id proident elit ipsum. <br />Cupidatat laborum ut nulla qui sunt anim officia aute qui adipisicing <br />ullamco consectetur.Incididunt culpa mollit non sint ex. <br />Sit anim consequat proident proident mollit cillum nostrud ea excepteur.
-                  </div>
-                </div>
-              </a>
-              <a href='/clubs/defaultClub2'>
-                <div className='inline-block bg-slate-900 h-[400px] w-[600px] bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 rounded-2xl p-4 mx-8 transform hover:scale-110 transition duration-300'>
-                  <span className='text-whiteAlternate font-montserrat font-bold text-6xl'>Club 4</span>
-                  <div className='mt-4 font-montserrat text-white'>
-                    Esse adipisicing officia ut magna. Occaecat Lorem id ea Lorem <br /> labore excepteur id proident elit ipsum. <br />Cupidatat laborum ut nulla qui sunt anim officia aute qui adipisicing <br />ullamco consectetur.Incididunt culpa mollit non sint ex. <br />Sit anim consequat proident proident mollit cillum nostrud ea excepteur.<br />
-                    Esse adipisicing officia ut magna. Occaecat Lorem id ea Lorem <br /> labore excepteur id proident elit ipsum. <br />Cupidatat laborum ut nulla qui sunt anim officia aute qui adipisicing <br />ullamco consectetur.Incididunt culpa mollit non sint ex. <br />Sit anim consequat proident proident mollit cillum nostrud ea excepteur.
-                  </div>
-                </div>
-              </a>
-              <a href='/clubs/defaultClub2'>
-                <div className='inline-block bg-slate-900 h-[400px] w-[600px] bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 rounded-2xl p-4 mx-8 transform hover:scale-110 transition duration-300'>
-                  <span className='text-whiteAlternate font-montserrat font-bold text-6xl'>Club 5</span>
-                  <div className='mt-4 font-montserrat text-white'>
-                    Esse adipisicing officia ut magna. Occaecat Lorem id ea Lorem <br /> labore excepteur id proident elit ipsum. <br />Cupidatat laborum ut nulla qui sunt anim officia aute qui adipisicing <br />ullamco consectetur.Incididunt culpa mollit non sint ex. <br />Sit anim consequat proident proident mollit cillum nostrud ea excepteur.<br />
-                    Esse adipisicing officia ut magna. Occaecat Lorem id ea Lorem <br /> labore excepteur id proident elit ipsum. <br />Cupidatat laborum ut nulla qui sunt anim officia aute qui adipisicing <br />ullamco consectetur.Incididunt culpa mollit non sint ex. <br />Sit anim consequat proident proident mollit cillum nostrud ea excepteur.
-                  </div>
-                </div>
-              </a>
-              <a href='/clubs/defaultClub2'>
-                <div className='inline-block bg-slate-900 h-[400px] w-[600px] bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 rounded-2xl p-4 mx-8 transform hover:scale-110 transition duration-300'>
-                  <span className='text-whiteAlternate font-montserrat font-bold text-6xl'>Club 6</span>
-                  <div className='mt-4 font-montserrat text-white'>
-                    Esse adipisicing officia ut magna. Occaecat Lorem id ea Lorem <br /> labore excepteur id proident elit ipsum. <br />Cupidatat laborum ut nulla qui sunt anim officia aute qui adipisicing <br />ullamco consectetur.Incididunt culpa mollit non sint ex. <br />Sit anim consequat proident proident mollit cillum nostrud ea excepteur.<br />
-                    Esse adipisicing officia ut magna. Occaecat Lorem id ea Lorem <br /> labore excepteur id proident elit ipsum. <br />Cupidatat laborum ut nulla qui sunt anim officia aute qui adipisicing <br />ullamco consectetur.Incididunt culpa mollit non sint ex. <br />Sit anim consequat proident proident mollit cillum nostrud ea excepteur.
-                  </div>
-                </div>
-              </a>
+              <ClubCard key={1} clubName={'VIT Music Club'} />
+              <ClubCard key={2} clubName={'ACM VIT'}/>
+              <ClubCard key={3} clubName={'VIT Dance Club'} />
+              <ClubCard key={4} clubName={'VIT Robotics Club'} />
+              <ClubCard key={5} clubName={'Dramatics Club'} />
+              <ClubCard key={6} clubName={'Some Club idk'} />
             </div>
-          </section>
+          </section> */}
         </div>
       </main>
     </div>
