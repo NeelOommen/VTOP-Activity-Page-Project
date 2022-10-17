@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className='bg-mainColor w-full h-screen'>
+        <div className='bg-mainColor w-full h-screen fixed'>
           <nav className='p-4 mb-10'>
             <span className='text-whiteAlternate hover:text-blueAlternate1 text-4xl font-montserrat font-bold float-left transition duration-300'>VIT Vellore Events</span>
             <ul className='text-whiteAlternate font-montserrat float-left text-2xl m-1.5 ml-6'>
@@ -22,8 +22,8 @@ export default function Home() {
             </ul>
           </nav>
           <section id="preview_section" className='bg-bg-1 h-fit w-full clear-both p-1'>
-            <div className='px-6 py-4'>
-              <div className='columns-4 flex justify-center p-4 rounded-2xl bg-whiteAlternate bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20'>
+            <div className='px-6 py-2'>
+              <div className='columns-4 flex justify-center p-2 rounded-2xl bg-whiteAlternate bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20'>
                 <img src="/images/preview1.png" className='w-[300px] h-[300px] rounded-3xl mx-10'/>
                 <img src="/images/preview2.png" className='w-[300px] h-[300px] rounded-3xl mx-10'/>
                 <img src="/images/preview3.png" className='w-[300px] h-[300px] rounded-3xl mx-10'/>
@@ -32,26 +32,28 @@ export default function Home() {
             </div>
             <div className='m-2 ml-8 mr-8 p-4 mb-8 rounded-lg bg-black bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-40'>
               <div className='text-white font-montserrat text-lg'>
-                Enim amet dolore duis ex laborum irure. Adipisicing incididunt minim reprehenderit amet veniam culpa qui ea. Ullamco labore sint excepteur pariatur amet id culpa occaecat nulla enim aliqua. Reprehenderit cupidatat eu consequat aliqua laboris minim nulla. Veniam non veniam elit non mollit mollit nisi adipisicing occaecat enim et fugiat. Mollit in eu esse pariatur qui aute eu labore amet qui aliqua irure sit adipisicing. Magna nisi eu anim enim cillum veniam aliquip sint qui tempor minim velit pariatur.
+              Enim amet dolore duis ex laborum irure. Adipisicing incididunt minim reprehenderit amet veniam culpa qui ea. Ullamco labore sint excepteur pariatur amet id culpa occaecat nulla enim aliqua. Reprehenderit cupidatat eu consequat aliqua laboris minim nulla. Veniam non veniam elit non mollit mollit nisi adipisicing occaecat enim et fugiat. Mollit in eu esse pariatur qui aute eu labore amet qui aliqua irure sit adipisicing. Magna nisi eu anim enim cillum veniam aliquip sint qui tempor minim velit pariatur.
                 Culpa occaecat amet elit incididunt dolore fugiat. Incididunt exercitation sit commodo irure consequat ex irure sint dolor. Minim aliquip deserunt esse adipisicing ea sit laboris nulla ad non mollit tempor anim voluptate.
                 Est ut anim eiusmod exercitation occaecat. Occaecat ea veniam adipisicing proident anim in ullamco incididunt nostrud. Officia quis aute nostrud sunt enim commodo sunt sunt. Id ut enim qui enim anim ad nisi elit. Amet aliquip commodo aliqua velit velit consectetur proident cupidatat qui qui amet. Nostrud proident do Lorem dolor et elit. Consequat quis commodo proident proident elit labore non pariatur cillum commodo aute adipisicing do.
               </div>
             </div>
+            <div className='flex justify-center'>
+              <div className='ml-8 mr-8 mb-8 p-1 rounded-lg bg-black bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-40 w-fit'>
+                <div className='text-white font-montserrat text-lg'>
+                  Made by &nbsp;
+                    <span className='hover:text-gold transition duration-300'>Karthika</span>
+                  , &nbsp;
+                    <span className='hover:text-green transition duration-300'>Karthik</span>
+                  , &nbsp;
+                    <span className='hover:text-blueAccent2 transition duration-300'>Melissa</span>
+                  , &nbsp;
+                    <span className='hover:text-name1 transition duration-300'>Aleena</span>
+                  , &nbsp;
+                    <span className='hover:text-name2 transition duration-300'>Neel</span>
+                </div>
+              </div>
+            </div>
           </section>
-
-          {/* <section id='club_section' className='h-screen w-full bg-bg-2 bg-cover absolute'>
-            <div className='relative top-4 left-4 p-2 rounded-2xl w-[230px] bg-blueAlternate1 transform hover:scale-110 transition duration-300'>
-                <span className='text-whiteAlternate font-montserrat text-7xl font-bold'>Clubs</span>
-            </div>
-            <div className='overflow-x-scroll overflow-y-hidden scrollbar-hide whitespace-nowrap relative top-32'>
-              <ClubCard key={1} clubName={'VIT Music Club'} />
-              <ClubCard key={2} clubName={'ACM VIT'}/>
-              <ClubCard key={3} clubName={'VIT Dance Club'} />
-              <ClubCard key={4} clubName={'VIT Robotics Club'} />
-              <ClubCard key={5} clubName={'Dramatics Club'} />
-              <ClubCard key={6} clubName={'Some Club idk'} />
-            </div>
-          </section> */}
         </div>
       </main>
     </div>

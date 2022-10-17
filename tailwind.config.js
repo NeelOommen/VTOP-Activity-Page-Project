@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     backgroundImage:{
       'bg-1': "url(../public/images/background2.png)",
-      'bg-2': "url(../public/images/background3.png)"
+      'bg-2': "url(../public/images/background3.png)",
+      'bg-3': "url(../public/images/background.jfif)"
     },
     extend: {
       fontFamily: {
@@ -27,8 +28,16 @@ module.exports = {
       'white': '#ffffff',
       'slate-900': '#0f172a',
       'black': '#000000',
-      'green': '#A2FA95',
-      'gold': '#D6A419'
+      'green': '#328726',
+      'gold': '#D6A419',
+      'gradient-from-main': '#071E3D',
+      'gradient-via-blue' : '#32918C',
+      'gradient-to-lightBlue': '#DCF6F4',
+      'highlighter': '#0095FA',
+      'linkHighlight': '#EEE8A9',
+      'linkActiveHighlight': '#EBFDFE',
+      'name1': '#0eeb8f',
+      'name2': '#00e5ff'
     },
   },
   plugins: [

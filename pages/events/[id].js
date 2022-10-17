@@ -17,7 +17,7 @@ export async function getServerSideProps(context){
     return{
         props: {
             images: imageData,
-            dateInfo: dateData,
+            dateInfo: dateData[0],
         },
     }
 }
@@ -28,23 +28,35 @@ export default function eventPage({ images,dateInfo }) {
     const { id } = router.query;
 
     return (
-        <div className="bg-mainColor h-screen">
-            <nav className='p-2 mb-10'>
+        <div className="bg-mainColor">
+             <nav className='p-4 mb-10'>
+                <a href="/">
+                    <span className='text-whiteAlternate hover:text-blueAlternate1 text-4xl font-montserrat font-bold float-left transition duration-300'>VIT Vellore Events</span>
+                </a>
                 <ul className='text-whiteAlternate font-montserrat float-left text-2xl m-1.5 ml-6'>
-                  <li className='float-left ml-3 mr-3'><a href='/' className='hover:text-blueAlternate1 transition duration-300'>Back</a></li>
+                    <li className='float-left ml-3 mr-3'>
+                        <a href='/events/eventList' className='hover:text-blueAlternate1 transition duration-300'>Back</a>
+                    </li>
                 </ul>
-                <span className='text-whiteAlternate hover:text-blueAlternate1 text-4xl font-montserrat font-bold float-left transition duration-300'>{id}</span>
             </nav>
-            <div>
-            <span className='text-whiteAlternate hover:text-blueAlternate1 text-2xl font-montserrat float-left m-6 p-2 transition duration-300'>Hosted on: {dateInfo[0].eventDate}</span>
-            </div>
-            <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24">
-                <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-                    {images.map((image) => (
-                        <BlurImage key={image.id} image={image} />
-                    )
-                    )
-                    }
+            <div className="h-full overflow-x-hidden bg-bg-3 bg-fixed bg-cover overflow-y-clip">
+                <div className='relative py-1 rounded-2xl w-fit bg-highlighter hover:bg-blueAccent2 mb-2 mt-4 mx-4 transition duration-300'>    
+                    <div className='text-whiteAlternate text-4xl font-montserrat font-bold transition duration-300 mt-2 mx-4'>{id}</div>
+                    <div className='text-whiteAlternate text-2xl font-montserrat mt-2 mx-4 p-2 transition duration-300'>
+                        Hosted on: {dateInfo.eventDate}, by&nbsp;
+                        <a href={"/clubs/" + dateInfo.clubName} className="font-bold text-linkHighlight hover:text-linkActiveHighlight transition duration-300">
+                            {dateInfo.clubName}
+                        </a>
+                    </div>
+                </div>
+                <div className="max-w-full mx-auto py-2 px-4 sm:py-2 mt-6">
+                    <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-4 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-6">
+                        {images.map((image) => (
+                            <BlurImage key={image.id} image={image} />
+                        )
+                        )
+                        }
+                    </div>
                 </div>
             </div>
         </div>
