@@ -583,6 +583,18 @@ video {
   left: 1rem;
 }
 
+.bottom-4 {
+  bottom: 1rem;
+}
+
+.bottom-2 {
+  bottom: 0.5rem;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
 .float-left {
   float: left;
 }
@@ -679,6 +691,10 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .inline-block {
@@ -975,6 +991,11 @@ video {
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {

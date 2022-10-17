@@ -21,7 +21,7 @@ export default function Home() {
               <li className='float-left ml-3 mr-3'><a href='/events/eventList' className='hover:text-blueAlternate1 transition duration-300'>Events</a></li>
             </ul>
           </nav>
-          <section id="preview_section" className='bg-bg-1 h-fit w-full clear-both p-1'>
+          <section id="preview_section" className='bg-bg-1 h-screen w-full clear-both p-1'>
             <div className='px-6 py-2'>
               <div className='columns-4 flex justify-center p-2 rounded-2xl bg-whiteAlternate bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20'>
                 <img src="/images/preview1.png" className='w-[300px] h-[300px] rounded-3xl mx-10'/>
@@ -31,14 +31,20 @@ export default function Home() {
               </div>
             </div>
             <div className='m-2 ml-8 mr-8 p-4 mb-8 rounded-lg bg-black bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-40'>
-              <div className='text-white font-montserrat text-lg'>
-              Enim amet dolore duis ex laborum irure. Adipisicing incididunt minim reprehenderit amet veniam culpa qui ea. Ullamco labore sint excepteur pariatur amet id culpa occaecat nulla enim aliqua. Reprehenderit cupidatat eu consequat aliqua laboris minim nulla. Veniam non veniam elit non mollit mollit nisi adipisicing occaecat enim et fugiat. Mollit in eu esse pariatur qui aute eu labore amet qui aliqua irure sit adipisicing. Magna nisi eu anim enim cillum veniam aliquip sint qui tempor minim velit pariatur.
-                Culpa occaecat amet elit incididunt dolore fugiat. Incididunt exercitation sit commodo irure consequat ex irure sint dolor. Minim aliquip deserunt esse adipisicing ea sit laboris nulla ad non mollit tempor anim voluptate.
-                Est ut anim eiusmod exercitation occaecat. Occaecat ea veniam adipisicing proident anim in ullamco incididunt nostrud. Officia quis aute nostrud sunt enim commodo sunt sunt. Id ut enim qui enim anim ad nisi elit. Amet aliquip commodo aliqua velit velit consectetur proident cupidatat qui qui amet. Nostrud proident do Lorem dolor et elit. Consequat quis commodo proident proident elit labore non pariatur cillum commodo aute adipisicing do.
+              <div className='text-white font-montserrat text-xl'>
+                College is confusing. We know - been there, done that. All everyone ever needed was that one caring senior. Go no further
+                 - we are here for you! The one-stop solution with answers to all your doubts, problems and confusions. Made for students
+                 , by students.
+                <br />
+                <br />
+                At present, to get any information about a VIT club or club events, the students are required 
+                to visit the social media pages or websites of the individual clubs, with no common solution for all the clubs.
+                This makes it difficult for the students to keep up with the ongoing and upcoming club events.
+                So, we bring you a website where you can find it all!
               </div>
             </div>
             <div className='flex justify-center'>
-              <div className='ml-8 mr-8 mb-8 p-1 rounded-lg bg-black bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-40 w-fit'>
+              <div className='ml-8 mr-8 mb-8 mt-8 p-2 rounded-lg bg-black bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-40 w-fit'>
                 <div className='text-white font-montserrat text-lg'>
                   Made by &nbsp;
                     <span className='hover:text-gold transition duration-300'>Karthika</span>

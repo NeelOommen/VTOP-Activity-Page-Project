@@ -54,7 +54,7 @@ export default function clubPage({ images, clubInfo, upcomingEvents, oldEvents }
                     <div>
                         <span className='text-whiteAlternate hover:text-gold text-2xl font-montserrat font-bold mx-8 transition duration-300'>Social Media</span>
                         <div className='text-whiteAlternate hover:text-blueAlternate1 text-2xl font-montserrat m-6 p-2 transition duration-300'>
-                          <a href={clubInfo.instagram}>Instagram</a> 
+                          <a href={clubInfo.instagram} target="_blank">Instagram</a> 
                         </div>
                         <div className='text-whiteAlternate hover:text-blueAlternate1 text-2xl font-montserrat m-6 p-2 transition duration-300'>
                           Email: {clubInfo.email}
@@ -63,7 +63,9 @@ export default function clubPage({ images, clubInfo, upcomingEvents, oldEvents }
                     <div>
                         <span className='text-whiteAlternate hover:text-gold text-2xl font-montserrat font-bold mx-8 transition duration-300'>Upcoming Events</span>
                         {upcomingEvents.map((ev) => (
-                            <div className='text-whiteAlternate hover:text-blueAlternate1 text-2xl font-montserrat m-6 p-2 transition duration-300'>{ev.eventName}, on {ev.dateOn}, at {ev.venue}.</div>
+                            <a href="https://vtop.vit.ac.in/vtop/login" target="_blank">
+                                <div className='text-whiteAlternate hover:text-blueAlternate1 text-2xl font-montserrat m-6 p-2 transition duration-300'>{ev.eventName}, on {ev.dateOn}, at {ev.venue}.</div>
+                            </a>
                         ))}
                     </div> 
                     <div>
