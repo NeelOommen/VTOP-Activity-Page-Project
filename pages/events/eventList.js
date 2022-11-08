@@ -5,7 +5,8 @@ export async function getStaticProps(){
 
     const {data: eventList} = await supabase
     .from('events')
-    .select('*');
+    .select('*')
+    .order('id');
 
     return{
         props: {

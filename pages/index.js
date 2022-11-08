@@ -20,6 +20,7 @@ export default function Home() {
               <li className='float-left ml-3 mr-3'><a href='/clubs/clubList' className='hover:text-blueAlternate1 transition duration-300'>Clubs</a></li>
               <li className='float-left ml-3 mr-3'><a href='/events/eventList' className='hover:text-blueAlternate1 transition duration-300'>Events</a></li>
             </ul>
+            <a href='/admin' className='text-whiteAlternate hover:text-blueAlternate1 font-montserrat float-right text-2xl m-1.5 transition duration-300'>Admin</a>
           </nav>
           <section id="preview_section" className='bg-bg-1 h-screen w-full clear-both p-1'>
             <div className='px-6 py-2'>
